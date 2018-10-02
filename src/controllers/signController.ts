@@ -12,6 +12,7 @@ class SignTransactionRequest {
 
     @IsNotEmpty()
     @IsString()
+    @IsBase64()
     transactionContext: string;
 }
 
