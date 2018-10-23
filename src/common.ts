@@ -49,6 +49,7 @@ export class Settings {
     RippleSignService: {
         HotWalletAddress: string;
     };
+    Tag: number;
 }
 
 /**
