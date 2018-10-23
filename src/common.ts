@@ -48,8 +48,8 @@ export function fromBase64<T>(str: string): T {
 export class Settings {
     RippleSignService: {
         HotWalletAddress: string;
+        Tag: number;
     };
-    Tag: number;
 }
 
 /**
