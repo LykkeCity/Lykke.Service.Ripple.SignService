@@ -14,7 +14,7 @@ export class WalletsController {
     createWallet() {
 
         let tag = randomBytes(4).readUInt32BE(0, true);
-        if (!!this.settings.RippleSignService.Tag && ++WalletsController.tagCounter % 3 == 0) {
+        if (!!this.settings.RippleSignService.Tag && ++WalletsController.tagCounter % 3 != 0) {
             tag = this.settings.RippleSignService.Tag;
         }
 
