@@ -11,7 +11,7 @@ export class WalletsController {
     @Post()
     createWallet() {
         return {
-            publicAddress: `${this.settings.RippleSignService.HotWalletAddress}${ADDRESS_SEPARATOR}${this.settings.Tag || randomBytes(4).readUInt32BE(0, true)}`,
+            publicAddress: `${this.settings.RippleSignService.HotWalletAddress}${ADDRESS_SEPARATOR}${this.settings.RippleSignService.Tag || randomBytes(4).readUInt32BE(0, true)}`,
             privateKey: DUMMY_PRIVATE_KEY
         };
     }
