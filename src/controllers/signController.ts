@@ -39,10 +39,10 @@ export class SignController {
         }
 
         // for real transaction we get tx ID as a reasult of tx signing
-        // for simulated transactions we use timestamp as tx ID
+        // for simulated transactions we will use operation ID as tx ID
         const data = transaction != DUMMY_TX
             ? this.api.sign(transaction, request.privateKeys[0])
-            : { id: Date.now().toFixed() };
+            : {};
 
         return {
             signedTransaction: toBase64(data)
